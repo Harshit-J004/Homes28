@@ -29,7 +29,7 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
+  <header class="header" id="header" data-header>
 
     <div class="overlay" data-overlay></div>
 
@@ -47,7 +47,7 @@
           </li>
 
           <li>
-            <a href="#" class="header-top-link">
+            <a href="https://maps.app.goo.gl/6WafuiNXur3nEwh67" class="header-top-link">
               <ion-icon name="location-outline"></ion-icon>
 
               <address>21, DLF Tower, DLF Cyber City, Gurugram</address>
@@ -110,7 +110,7 @@
             <ul class="navbar-list">
 
               <li>
-                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                <a href="#header" class="navbar-link" data-nav-link>Home</a>
               </li>
 
               <li>
@@ -130,7 +130,7 @@
               </li>
 
               <li>
-                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+                <a href="#footer" class="navbar-link" data-nav-link>Contact</a>
               </li>
 
             </ul>
@@ -140,15 +140,11 @@
 
         <div class="header-bottom-actions">
 
-          <button class="header-bottom-actions-btn" aria-label="Search">
-            <ion-icon name="search-outline"></ion-icon>
-
-            <span>Search</span>
-          </button>
-
-          <button class="header-bottom-actions-btn" aria-label="Profile">
-            <ion-icon name="person-outline"></ion-icon>
-
+          <button class="header-bottom-actions-btn"  aria-label="Profile">
+            <a href="login.html">
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+ 
             <span>Profile</span>
           </button>
 
@@ -193,13 +189,49 @@
               Discover Your Dream Home: Where Every Listing Tells a Story!
             </p>
 
-            <button class="btn">Make An Enquiry</button>
+            <div class=body> 
+
+              <button class="btn-open-popup" onclick="togglePopup()"> 
+                Make An Enquiry
+              </button> 
+              
+              <div id="popupOverlay" 
+              class="overlay-container"> 
+              <div class="popup-box"> 
+                <h2 style="color: green;">Popup Form</h2> 
+                <form class="form-container"> 
+                    <label class="form-label" 
+                           for="name"> 
+                      Username: 
+                      </label> 
+                    <input class="form-input" type="text" 
+                           placeholder="Enter Your Username" 
+                           id="name" name="name" required> 
+              
+                    <label class="form-label" for="email">Email:</label> 
+                    <input class="form-input"
+                           type="email" 
+                           placeholder="Enter Your Email"
+                           id="email" 
+                           name="email" required> 
+              
+                    <button class="btn-submit" 
+                            type="submit"> 
+                      Submit 
+                      </button> 
+                </form> 
+              
+                <button class="btn-close-popup" 
+                        onclick="togglePopup()"> 
+                  Close 
+                  </button> 
+              </div> 
+              </div> 
+              </div>
 
           </div>
 
-          <figure class="hero-banner">
-            <img src="./assets/images/hero-banner.png" alt="Modern house model" class="w-100">
-          </figure>
+          
 
         </div>
       </section>
@@ -330,7 +362,7 @@
                 </div>
 
                 <h3 class="h3 card-title">
-                  <a href="#">Rent a home</a>
+                  <a href="addlisting.html">Rent a home</a>
                 </h3>
 
                 <p class="card-text">
@@ -338,8 +370,8 @@
                   to call home.
                 </p>
 
-                <a href="#" class="card-link">
-                  <span>Find A Home</span>
+                <a href="addlisting.html" class="card-link">
+                  <span>List A Home</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </a>
@@ -355,7 +387,7 @@
                 </div>
 
                 <h3 class="h3 card-title">
-                  <a href="#">Sell a home</a>
+                  <a href="addlisting.html">Sell a home</a>
                 </h3>
 
                 <p class="card-text">
@@ -363,8 +395,8 @@
                   to call home.
                 </p>
 
-                <a href="#" class="card-link">
-                  <span>Find A Home</span>
+                <a href="addlisting.html" class="card-link">
+                  <span>List A Home</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </a>
@@ -440,9 +472,9 @@
                   </h3>
 
                   <p class="card-text">
-                    Adonia is an epitome of luxury living with spacious apartments and premium amenities 
-                    such as a fully-equipped fitness center, indoor and outdoor games facilities, a clubhouse, landscaped gardens, and much more. 
-                    These amenities cater to the diverse needs and preferences of its residents and provide a wholesome living experience.
+                    Adonia is an epitome of luxury living with spacious apartments and premium amenities such as a fully-equipped fitness center, 
+                    indoor and outdoor games facilities, a clubhouse, landscaped gardens. These amenities cater to the diverse needs 
+                    and preferences of its residents and provide a wholesome living experience.
                   </p>
 
                   <ul class="card-list">
@@ -552,7 +584,7 @@
                 <div class="card-content">
 
                   <div class="card-price">
-                    <strong>₹3 Cr*</strong>
+                    <strong>₹3.00 Crore</strong>
                   </div>
 
                   <h3 class="h3 card-title">
@@ -560,10 +592,9 @@
                   </h3>
 
                   <p class="card-text">
-                    The Ultima offers you ultra-modern yet gracious luxury homes, nestled in the lap of nature, 
-                    and neighboring a staggering 405 hectares of reserved greens with all amenities like Golf courses, 
-                    shopping avenues, multiplex, eateries, schools, manicured gardens, hotels, commercial destinations 
-                    and hospitals all within proximity.
+                    The Ultima offers you ultra-modern yet gracious luxury homes, nestled in the lap of nature, and neighboring a 
+                    staggering 405 hectares of reserved greens with all amenities like Golf courses, shopping avenues, multiplex, 
+                    eateries, schools, manicured gardens, hotels, commercial destinations and hospitals all within proximity.
                   </p>
 
                   <ul class="card-list">
@@ -640,18 +671,18 @@
 
                 <figure class="card-banner">
 
-                  <a href="#">
+                  <a href="https://www.prestigeconstructions.com/residential-projects/bangalore/prestige-falcon-city" target="_blank"">
                     <img src="./assets/images/property-3.jpg" alt="Comfortable Apartment" class="w-100">
                   </a>
 
-                  <div class="card-badge green">For Rent</div>
+                  <div class="card-badge orange">For Sale</div>
 
                   <div class="banner-actions">
 
                     <button class="banner-actions-btn">
                       <ion-icon name="location"></ion-icon>
 
-                      <address>Belmont Gardens, Chicago</address>
+                      <address>Konanakunte, Bangalore</address>
                     </button>
 
                     <button class="banner-actions-btn">
@@ -673,15 +704,17 @@
                 <div class="card-content">
 
                   <div class="card-price">
-                    <strong>$34,900</strong>/Month
+                    <strong>₹ 1.01 Crore</strong>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Comfortable Apartment</a>
+                    <a href="https://www.prestigeconstructions.com/residential-projects/bangalore/prestige-falcon-city" target="_blank"">Prestige Falcon City</a>
                   </h3>
 
                   <p class="card-text">
-                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
+                  When you make Prestige Falcon City your home, you will be living in of one 
+                  of the best developments in South Bangalore.Added to that is a vast retail area and Bangalore's largest Forum Mall. 
+                  Home to a sprawling clubhouse, an entertainment zone & a huge cultural & convention centre
                   </p>
 
                   <ul class="card-list">
@@ -703,7 +736,7 @@
                     </li>
 
                     <li class="card-item">
-                      <strong>3450</strong>
+                      <strong>2140 </strong>
 
                       <ion-icon name="square-outline"></ion-icon>
 
@@ -719,12 +752,12 @@
                   <div class="card-author">
 
                     <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
+                      <img src="./assets/images/prestige.svg" alt="Prestige Group" class="w-100">
                     </figure>
 
                     <div>
                       <p class="author-name">
-                        <a href="#">William Seklo</a>
+                        <a href="https://www.prestigeconstructions.com/">Prestige Group</a>
                       </p>
 
                       <p class="author-title">Estate Agents</p>
@@ -752,14 +785,14 @@
 
               </div>
             </li>
-
+            
             <li>
               <div class="property-card">
 
                 <figure class="card-banner">
 
                   <a href="#">
-                    <img src="./assets/images/property-4.png" alt="Luxury villa in Rego Park" class="w-100">
+                    <img src="./assets/images/property-4.jpg" alt="Luxury villa in Rego Park" class="w-100">
                   </a>
 
                   <div class="card-badge green">For Rent</div>
@@ -769,7 +802,7 @@
                     <button class="banner-actions-btn">
                       <ion-icon name="location"></ion-icon>
 
-                      <address>Belmont Gardens, Chicago</address>
+                      <address>Pondicherry</address>
                     </button>
 
                     <button class="banner-actions-btn">
@@ -791,15 +824,16 @@
                 <div class="card-content">
 
                   <div class="card-price">
-                    <strong>$34,900</strong>/Month
+                    <strong>₹1,00,000</strong>/Month
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Luxury villa in Rego Park</a>
+                    <a href="#">Luxury villa in Pondicherry</a>
                   </h3>
 
                   <p class="card-text">
-                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
+                    
+                  Nestled in the serene landscapes of Pondicherry, this exquisite villa offers a perfect blend of luxury and tranquility. With spacious interiors, breathtaking views, and modern amenities, it promises an unforgettable retreat for those seeking a peaceful escape. An amazing experience for holidays.
                   </p>
 
                   <ul class="card-list">
@@ -842,7 +876,7 @@
 
                     <div>
                       <p class="author-name">
-                        <a href="#">William Seklo</a>
+                        <a href="#">Marcus Adams</a>
                       </p>
 
                       <p class="author-title">Estate Agents</p>
@@ -894,131 +928,154 @@
           <ul class="features-list">
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(0)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="car-sport-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Parking Space</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="car-sport-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">Parking Space</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+             
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(1)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="water-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Swimming Pool</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="water-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">Swimming Pool</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+             
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(2)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="shield-checkmark-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Private Security</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="shield-checkmark-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">Private Security</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+              
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(3)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="fitness-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Medical Center</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="fitness-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">Medical Center</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+              
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(4)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="library-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Library Area</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="library-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">Library Area</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+             
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(5)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="bed-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">King Size Beds</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="bed-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">King Size Beds</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+              
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(6)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Smart Homes</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="home-outline"></ion-icon>
-                </div>
 
-                <h3 class="card-title">Smart Homes</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+              
             </li>
 
             <li>
-              <a href="#" class="features-card">
+              
+                <button onclick="changeAmenityAndRedirect(7)" class="features-card">
+                  <div class="card-icon">
+                    <ion-icon name="football-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="card-title">Kid’s Playland</h3>
+  
+                  <div class="card-btn">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </button>
 
-                <div class="card-icon">
-                  <ion-icon name="football-outline"></ion-icon>
-                </div>
+                
 
-                <h3 class="card-title">Kid’s Playland</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
-              </a>
+             
             </li>
 
           </ul>
@@ -1243,7 +1300,7 @@
   <!-- 
     - #FOOTER
   -->
-  <footer class="footer">
+  <footer class="footer" id='footer'>
 
     <div class="footer-top">
       
@@ -1305,12 +1362,6 @@
             <li>
               <a href="https://www.instagram.com/homes__28/" class="header-top-social-link" target="_blank">
                 <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
               </a>
             </li>
 
@@ -1439,6 +1490,17 @@
   -->
   <script src="./assets/js/script.js"></script>
 
+  <script>
+    function changeAmenityAndRedirect(newAmenity) {
+      const url = new URL('amenity.html', window.location.href);
+      url.searchParams.set('amenity', newAmenity);
+      window.location.href = url.href;
+    }
+    function togglePopup() { 
+      const overlay = document.getElementById('popupOverlay'); 
+      overlay.classList.toggle('show'); 
+    }
+  </script>
   <!-- 
     - ionicon link
   -->
