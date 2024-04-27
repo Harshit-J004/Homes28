@@ -451,7 +451,7 @@ button, a { transition: var(--transition); }
 
 .hero {
   position: relative;
-  background-image: url('/assets/images/front-bg.jpg');
+  background-image: url('assets/images/front-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -50%;
